@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notes page | Keep My Note</title>
+    </head>
+    <body>
+        <a href="/">Go to home</a>
+        <h1 style="color:blanchedalmond">{{context.user}} NOTES LIST</h1>
+        <ul>
+            {%for note in context.notes%}
+                <li>{{note}}</li> 
+            {%endfor%}
+        </ul>
+    </body>
+</html>

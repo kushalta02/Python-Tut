@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>| Home page |</title>
+    </head>
+    <header>
+        <img src="{{url_for('static', filename='assets/new.png')}}">
+
+        <!-- <img src="/static/assets/logo.png" style="height:50px;width:50px;" alt="A Logo"> -->
+        
+    </header>
+    <body>
+
+        <h1 style="text-align:center">WELCOME TO OUR WEBPAGE {{context.username}}</h1>
+        <div style="height: 500px;
+            width: 400px;
+            background: white;
+        
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-block-end: -100px;
+            margin-left: -100px;"
+
+        ><h5>JUST CRACK IT !!!!</h5>
+        <h2>To Do list</h2>
+        <ul>
+            {% for item in context.todo %}
+                <li>{{item}}</li>
+            {% else %}
+                No item in TODO list
+            {% endfor %}
+
+        </ul>
+    
+    </div>
+        
+    </body>
+
+</html>
